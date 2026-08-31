@@ -2,9 +2,9 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.cjs",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "vercel-build": "echo 'Building for Vercel'"
   },
   "keywords": [],
@@ -24,8 +24,10 @@
     "multer": "^2.0.2",
     "node-cron": "^4.6.0",
     "nodemailer": "^7.0.9",
-    "nodemon": "^3.1.10",
     "pdfjs-dist": "^5.4.296"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   },
   "allowScripts": {
     "bcrypt@6.0.0": true

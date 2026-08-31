@@ -110,7 +110,7 @@ app.get("/", (req, res) => {
 app.use("/api", mainRoute);
 
 // Start cron jobs for medication and appointment reminders
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production" && process.env.ENABLE_CRON === "true") {
   startCronJobs();
 }
 
