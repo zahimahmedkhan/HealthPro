@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        max-width: 500px;
+        margin: 20px auto;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+        text-align: center;
+        font-size: 22px;
+      }
+      p {
+        color: #555;
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .otp-box {
+        text-align: center;
+        margin: 25px 0;
+      }
+      .otp-code {
+        display: inline-block;
+        background-color: #e8f0fe;
+        color: #1a73e8;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 12px 24px;
+        border-radius: 6px;
+        letter-spacing: 2px;
+      }
+      .btn {
+        display: inline-block;
+        background-color: #1a73e8;
+        color: #fff;
+        padding: 12px 22px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        margin: 15px auto;
+      }
+      .footer {
+        color: #777;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 20px;
+      }
+      @media (max-width: 600px) {
+        .container {
+          margin: 10px;
+          padding: 20px;
+        }
+        h2 {
+          font-size: 20px;
+        }
+        .otp-code {
+          font-size: 20px;
+          padding: 10px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome, {{userName}}!</h2>
+      <p>Use the code below to verify your email address.</p>
+
+      <div class="otp-box">
+        <span class="otp-code">{{otp}}</span>
+      </div>
+
+      <p class="footer">
+        This code will expire in <strong>5 minutes</strong>.<br />
+        If you didn’t request this, ignore this email.
+      </p>
+    </div>
+  </body>
+</html>
